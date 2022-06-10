@@ -78,11 +78,11 @@ body {
     overflow-x: scroll; 
 }
 
-/* VER SE PODE...SE VÃO USAR MOBILE PARA VER */
+/* VER SE PODE...SE VÃO USAR MOBILE PARA VER 
 
 .opcoes::-webkit-scrollbar { 
     display: none;
-  }
+  }*/
 
 .opcoes > div {
     height: 225px;
@@ -94,6 +94,9 @@ body {
     position: relative;
 }
 
+.escolhido {
+    border: 5px solid rgb(50, 183, 47);
+}
 
 .check{
     width: 19px;
@@ -191,6 +194,10 @@ button {
     justify-content: center;
     border: #CBCBCB;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+}
+
+.habilitado {
+    background-color: #32B72F;
 }
 
 button > div {

@@ -19,7 +19,7 @@
 
                 <div class="pedido">
                 <div>Escolha seu prato</div>
-                <div class="opcoes">
+                <div class="opcoes comida">
                     <div>
                         <img src="https://br.jetss.com/wp-content/uploads/2021/03/Brasilia-Arroz-de-pequi.jpg" />
                         <div class="nome">Arroz com pequi</div>
@@ -29,7 +29,7 @@
                         
                     </div>
 
-                    <div>
+                    <div onclick="selecionarComida()">
                         <img src="https://diaonline.ig.com.br/wp-content/uploads/2019/09/empado-goiano-goinia_capa-e1569007778794-1024x647.jpg" />
                         <div class="nome">Empadão Goiano</div>
                         <div class="descricao">Empadão de frango</div>
@@ -88,7 +88,7 @@
 
                 <div class="pedido">
                 <div>Qual bebida você deseja?</div>
-                <div class="opcoes">
+                <div class="opcoes bebida">
                     <div>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrZJXpsuMlGxfevS05d4oruO_c5tKGDNkW8A&usqp=CAU" />
                         <div class="nome">Creme de morango</div>
@@ -97,7 +97,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
 
-                    <div>
+                    <div onclick="selecionarBebida();">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzW4n_UNydBEudUaBnNJsbUUft3Wigd23eUA&usqp=CAU" />
                         <div class="nome">Chimarrão</div>
                         <div class="descricao">Copo 500 ml</div>
@@ -166,7 +166,8 @@
 
                 <div class="pedido">
                     <div>Vai uma sobremesa ai?</div>
-                    <div class="opcoes">
+                    <div class="opcoes sobremesa">
+                        <!-- class="escolhido" -->
                         <div>
                             <img src="https://www.receitasagora.com.br/wp-content/uploads/2020/04/receita-bolo-no-pote-de-prestigio.jpg?ezimgfmt=rs:352x352/rscb1/ng:webp/ngcb1" />
                             <div class="nome">Bolo de pote</div>
@@ -175,7 +176,7 @@
                             <ion-icon class="check" name="checkmark-circle"></ion-icon>
                         </div>
 
-                        <div>
+                        <div onclick="selecionarSobremesa();">
                             <img src="https://vovopalmirinha.com.br/wp-content/uploads/2020/01/vovo-palmirinha-brownie.jpg" />
                             <div class="nome">Brownie</div>
                             <div class="descricao">Chocolate 150g</div>
@@ -231,10 +232,13 @@
 
 
             <div class="rodape"> 
-                <button><div>Selecione os 3 itens para fechar o pedido</div></button>
+                <button onclick="fazerPedido();"><div>Selecione os 3 itens para fechar o pedido</div></button>
             </div>
         
         
         <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+         <script src="scripts.js"></script> 
+
     </body>
 </html>
