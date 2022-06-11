@@ -98,15 +98,18 @@ body {
     border: 5px solid rgb(50, 183, 47);
 }
 
-.check{
+.check {
+        display: none;
+}
+
+.aparece {
     width: 19px;
     height: 19px;
     position: absolute;
     right: 10px;
-    bottom: 12px;
+    bottom: 2px;
     border-radius: 100%;
     color: #32B72F;
-    display: none;
 }
 
 .opcoes > div:last-child {
@@ -158,11 +161,18 @@ img {
 }
 
 .preco {
+    background-color: #CF2B2B;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #000000;
     margin-top: 10px;
+    display: flex;
+}
+
+.valor {
+    margin-left: 5px;
+    background-color: #333333;
 }
 
 .rodape {

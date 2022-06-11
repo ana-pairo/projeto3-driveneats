@@ -29,33 +29,100 @@ function verificacao(){
 
 }
 
-function selecionarComida(){
-    const selecionadoC = document.querySelector(".comida div");
-    selecionadoC.classList.add("escolhido");
+
+function selecionarComida(x){
+
+    const selecionado = document.querySelector(".comida > .escolhido ");
+    const checked = document.querySelector("x > .aparece ");
+
+    if (selecionado !== null) {
+        selecionado.classList.remove("escolhido");
+        checked.classList.remove("aparece");
+        checked.classList.add("check");
+    }
+
+
+    x.classList.add("escolhido");
+    const aparecer = document.querySelector("x > .aparece ");
+    aparecer.classList.add("aparece");
+    aparecer.classList.remove("check");
+
     verificacao();
 }
 
-function selecionarBebida(){
-    const selecionadoB = document.querySelector(".bebida div");
-    selecionadoB.classList.add("escolhido");
+function selecionarBebida(x){
+
+    const selecionado = document.querySelector(".bebida > .escolhido ");
+    
+
+    if (selecionado !== null) {
+        selecionado.classList.remove("escolhido");
+    }
+
+    x.classList.add("escolhido");
     verificacao();
 }
 
-function selecionarSobremesa(){
-    const selecionadoS = document.querySelector(".sobremesa div");
-    selecionadoS.classList.add("escolhido");
+function selecionarSobremesa(x){
+
+    const selecionado = document.querySelector(".sobremesa > .escolhido ");
+    if (selecionado !== null) {
+        selecionado.classList.remove("escolhido");
+    }
+    
+
+    x.classList.add("escolhido");
+
     verificacao();
 }
 
 
 
 
+// function selecionarComida(x){
+//     const apagar = document.querySelector(".comida .escolhido");
+//     const esconder = document.querySelector("comida .escolhido > .check")
+
+//     if (apagar){
+//         apagar.classList.remove("escolhido");
+//         esconder.classList.add("escondido");
+//     }
+
+//     const selecionadoC = document.querySelector(".comida > div:nth-child("+x+")");
+//     const checked = document.querySelector(".comida > div:nth-child("+x+") > .escondido"); 
+//     selecionadoC.classList.add("escolhido");
+//     checked.classList.remove("escondido");
+//     verificacao();
+// }
+
+// function selecionarBebida(x){
+//     const apagar = document.querySelector(".bebida .escolhido");
+//     if (apagar){
+//         apagar.classList.remove("escolhido");
+//     }
+
+//     const selecionadoB = document.querySelector(".bebida > div:nth-child("+x+")");
+//     selecionadoB.classList.add("escolhido");
+//     verificacao();
+// }
+
+// function selecionarSobremesa(x){
+//     const apagar = document.querySelector(".sobremesa .escolhido");
+//     if (apagar){
+//         apagar.classList.remove("escolhido");
+//     }
+
+//     const selecionadoS = document.querySelector(".sobremesa > div:nth-child("+x+")");
+//     selecionadoS.classList.add("escolhido");
+//     verificacao();
+// }
 
 
 
 
-function fazerPedido() {
 
 
-}
+
+
+
 
