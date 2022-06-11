@@ -20,7 +20,7 @@
                 <div class="pedido">
                 <div>Escolha seu prato</div>
                 <div class="opcoes comida">
-                    <div onclick="selecionarComida(this);">
+                    <div class="normal" onclick="selecionarComida(this);">
                         <img src="https://br.jetss.com/wp-content/uploads/2021/03/Brasilia-Arroz-de-pequi.jpg" />
                         <div class="nome">Arroz com pequi</div>
                         <div class="descricao">O melhor do Goiás porção individual</div>
@@ -29,7 +29,7 @@
                         
                     </div>
 
-                    <div onclick="selecionarComida(this);">
+                    <div class="normal" onclick="selecionarComida(this);">
                         <img src="https://diaonline.ig.com.br/wp-content/uploads/2019/09/empado-goiano-goinia_capa-e1569007778794-1024x647.jpg" />
                         <div class="nome">Empadão Goiano</div>
                         <div class="descricao">Empadão de frango</div>
@@ -37,7 +37,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
                     
-                    <div onclick="selecionarComida(this);">
+                    <div class="normal" onclick="selecionarComida(this);">
                         <img src="https://i2.wp.com/files.agro20.com.br/uploads/2020/03/comidabrasileira3.jpg?fit=1024%2C585&ssl=1" />
                         <div class="nome">Prato executivo</div>
                         <div class="descricao">Completo com línguiça, ovo e salada</div>
@@ -45,7 +45,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
 
-                    <div onclick="selecionarComida(this);">
+                    <div class="normal" onclick="selecionarComida(this);">
                         <img src="https://www.curtamais.com.br/uploads/midias/2559881dcddc660f29e38113bf38295b.jpg" />
                         <div class="nome">x-Tudo Goiano</div>
                         <div class="descricao">Tem ovo, salsicha, catupiry e muito mais</div>
@@ -53,7 +53,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
 
-                    <div onclick="selecionarComida(this);">
+                    <div class="normal" onclick="selecionarComida(this);">
                         <img src="https://www.megamodahotel.com.br/wp-content/uploads/2018/04/comida-goiana.jpg" />
                         <div class="nome">Pamonha à moda</div>
                         <div class="descricao">Pamonha com queijo, linguiça e pimenta</div>
@@ -61,7 +61,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
                 
-                    <div onclick="selecionarComida(this);">
+                    <div class="normal" onclick="selecionarComida(this);">
                         <img src="https://s2.glbimg.com/SLp7cgpzXfCRGIQC8atHinEOBnk=/0x0:1700x1065/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/a/i/6O8w22SIaknTH4k5ozxg/panelinha.jpeg" />
                         <div class="nome">Panelinha Goiana</div>
                         <div class="descricao">Frango com guariroba - 3 pessoas</div>
@@ -69,7 +69,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div> 
                     
-                    <div onclick="selecionarComida(this);">
+                    <div class="normal" onclick="selecionarComida(this);">
                         <img src="https://uploads.emaisgoias.com.br/2021/12/15d0e7b6-pedir-jantinha-em-goiania-1.jpg" />
                         <div class="nome">Jantinha</div>
                         <div class="descricao">Espetinho de picanha</div>
@@ -77,8 +77,8 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
                         
-                    <div>
-                        <ion-icon name="arrow-back-outline"></ion-icon>
+                    <div class="voltar">
+                        <ion-icon onclick="voltar(this);" name="arrow-back-outline"></ion-icon>
                     </div>
 
 
@@ -89,7 +89,7 @@
                 <div class="pedido">
                 <div>Qual bebida você deseja?</div>
                 <div class="opcoes bebida">
-                    <div onclick="selecionarBebida(this);">
+                    <div class="normal" onclick="selecionarBebida(this);">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrZJXpsuMlGxfevS05d4oruO_c5tKGDNkW8A&usqp=CAU" />
                         <div class="nome">Creme de morango</div>
                         <div class="descricao">Copo 500 ml</div>
@@ -97,7 +97,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
 
-                    <div onclick="selecionarBebida(this);">
+                    <div class="normal" onclick="selecionarBebida(this);">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzW4n_UNydBEudUaBnNJsbUUft3Wigd23eUA&usqp=CAU" />
                         <div class="nome">Chimarrão</div>
                         <div class="descricao">Copo 500 ml</div>
@@ -105,7 +105,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
 
-                    <div onclick="selecionarBebida(this);">
+                    <div class="normal" onclick="selecionarBebida(this);">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjQgfMDINjj-d2JyeM2ifPVP0y7QQ_hRF4ag&usqp=CAU" />
                         <div class="nome">Refrigerante Jesus</div>
                         <div class="descricao">Lata 350 ml</div>
@@ -113,7 +113,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
                     
-                    <div onclick="selecionarBebida(this);">
+                    <div class="normal" onclick="selecionarBebida(this);">
                         <img src="https://saude.abril.com.br/wp-content/uploads/2021/09/materia-energeticos.png" />
                         <div class="nome">Energético</div>
                         <div class="descricao">Lata 473 ml</div>
@@ -121,7 +121,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
 
-                    <div onclick="selecionarBebida(this);">
+                    <div class="normal" onclick="selecionarBebida(this);">
                         <img src="https://hortainhome.com.br/wp-content/uploads/2020/05/orange-juice-5224192_1920-e1591040438643.jpg" />
                         <div class="nome">Suco natural</div>
                         <div class="descricao">Garrafa 500 ml sabor laranja</div>
@@ -129,7 +129,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
 
-                    <div onclick="selecionarBebida(this);">
+                    <div class="normal" onclick="selecionarBebida(this);">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ewPfaqb26Nip7J_6Yr3BtOH-QTx78VNs9Q&usqp=CAU" />
                         <div class="nome">Cerveja Artesanal</div>
                         <div class="descricao">Tipo Stout Garrafa 500 ml</div>
@@ -137,7 +137,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
 
-                    <div onclick="selecionarBebida(this);">
+                    <div class="normal" onclick="selecionarBebida(this);">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRTVrEGJo0t0kPF4i5FZz8cX9c1TTZ7pLb-3osCdJsJFYsGkGvId-scNuyRBbts5NWBTY&usqp=CAU" />
                         <div class="nome">Água com gás</div>
                         <div class="descricao">Garrafa 500 ml</div>
@@ -145,7 +145,7 @@
                         <ion-icon class="check" name="checkmark-circle"></ion-icon>
                     </div>
 
-                    <div onclick="selecionarBebida(this);">
+                    <div class="normal" onclick="selecionarBebida(this);">
                         <img src="https://boaforma.abril.com.br/wp-content/uploads/sites/2/2017/07/thinkstockphotos-637330250.jpg" />
                         <div class="nome">Água de coco</div>
                         <div class="descricao">Garrafa 500 ml</div>
@@ -155,8 +155,8 @@
 
                     
 
-                    <div>
-                        <ion-icon name="arrow-back-outline"></ion-icon>
+                    <div class="voltar">
+                        <ion-icon onclick="voltar(this);" name="arrow-back-outline"></ion-icon>
                     </div>
 
 
@@ -167,7 +167,7 @@
                 <div class="pedido">
                     <div>Vai uma sobremesa ai?</div>
                     <div class="opcoes sobremesa">
-                        <div onclick="selecionarSobremesa(this);">
+                        <div class="normal" onclick="selecionarSobremesa(this);">
                             <img src="https://www.receitasagora.com.br/wp-content/uploads/2020/04/receita-bolo-no-pote-de-prestigio.jpg?ezimgfmt=rs:352x352/rscb1/ng:webp/ngcb1" />
                             <div class="nome">Bolo de pote</div>
                             <div class="descricao">Prestígio</div>
@@ -175,7 +175,7 @@
                             <ion-icon class="check" name="checkmark-circle"></ion-icon>
                         </div>
 
-                        <div onclick="selecionarSobremesa(this);">
+                        <div class="normal" onclick="selecionarSobremesa(this);">
                             <img src="https://vovopalmirinha.com.br/wp-content/uploads/2020/01/vovo-palmirinha-brownie.jpg" />
                             <div class="nome">Brownie</div>
                             <div class="descricao">Chocolate 150g</div>
@@ -183,7 +183,7 @@
                             <ion-icon class="check" name="checkmark-circle"></ion-icon>
                         </div>
 
-                        <div onclick="selecionarSobremesa(this);">
+                        <div class="normal" onclick="selecionarSobremesa(this);">
                             <img src="https://cdn.panelinha.com.br/receita/1014692400000-Cocada.jpg" />
                             <div class="nome">Cocada branca</div>
                             <div class="descricao">200g</div>
@@ -191,7 +191,7 @@
                             <ion-icon class="check" name="checkmark-circle"></ion-icon>
                         </div>
 
-                        <div onclick="selecionarSobremesa(this);">
+                        <div class="normal" onclick="selecionarSobremesa(this);">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWTED1TirSkWFroIdPp_KQyd4_Q7Q4hc67HQ&usqp=CAU" />
                             <div class="nome">Pudim de leite</div>
                             <div class="descricao">300g</div>
@@ -199,7 +199,7 @@
                             <ion-icon class="check" name="checkmark-circle"></ion-icon>
                         </div>
 
-                        <div onclick="selecionarSobremesa(this);">
+                        <div class="normal" onclick="selecionarSobremesa(this);">
                             <img src="https://www.sabornamesa.com.br/media/k2/items/cache/3cc3ea028ec2c5bc49d14fb381a9929f_XL.jpg" />
                             <div class="nome">Paçoca</div>
                             <div class="descricao">150g</div>
@@ -207,7 +207,7 @@
                             <ion-icon class="check" name="checkmark-circle"></ion-icon>
                         </div>
 
-                        <div onclick="selecionarSobremesa(this);">
+                        <div class="normal" onclick="selecionarSobremesa(this);">
                             <img src="https://static.clubedaanamariabraga.com.br/wp-content/uploads/2018/12/mariamole-tradicional-variacao-de-cafe-opcional-44347.jpg" />
                             <div class="nome">Maria mole</div>
                             <div class="descricao">100g</div>
@@ -217,8 +217,8 @@
 
                        
 
-                        <div>
-                            <ion-icon name="arrow-back-outline"></ion-icon>
+                        <div class="voltar">
+                            <ion-icon onclick="voltar(this);" name="arrow-back-outline"></ion-icon>
                         </div>
 
                          

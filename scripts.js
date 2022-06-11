@@ -129,12 +129,15 @@ function mandarPedido(){
 
     let minhaString = `Olá, gostaria de fazer o pedido: \n- Prato: ${nomeComida}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${casasDecimais}\n \nNome: ${nomeCliente} \nEndereço: ${enderecoCliente}`;
     const descricao = encodeURIComponent(minhaString);
-    console.log(descricao)
+    
 
-    window.open(`https://wa.me/5524992588128?text=${descricao}`);
+    window.open(`https://wa.me/5521991871506?text=${descricao}`);
 }
 
-
+function voltar(z){
+    let elementoTeste= z.parentElement.parentElement;
+    elementoTeste.scrollLeft=0;
+}
 
 
 
