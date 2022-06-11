@@ -231,7 +231,7 @@
 
 
             <div class="rodape"> 
-               <button onclick="redirecionar();"><div>Selecione os 3 itens para fechar o pedido</div></button>
+               <button onclick="fazerPedido();"><div>Selecione os 3 itens para fechar o pedido</div></button>
             </div>
 
 
@@ -257,8 +257,8 @@
                         <div>Total</div>
                         <div>R$ 70,00</div>
                     </div>
-                    <button>Tudo certo, pode pedir!</button>
-                    <div class="cancelar">Cancelar</div>
+                    <button onclick="mandarPedido();">Tudo certo, pode pedir!</button>
+                    <div onclick="cancelarPedido();" class="cancelar">Cancelar</div>
                 </div>
             </div>
         

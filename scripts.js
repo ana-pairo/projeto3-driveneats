@@ -54,20 +54,11 @@ function selecionarSobremesa(x){
     nomeSobremesa = x.querySelector(".nome").innerHTML;
     valorSobremesaString = x.querySelector(".valor").innerHTML;
     valorSobremesa = Number(x.querySelector(".valor").innerHTML.replace(",","."));
+    
+    
+    
     verificacao();
 }
-
-let conta= (valorComida+valorBebida+valorSobremesa);
-let valorTotal = conta.toFixed(2);
-let valorTotalString = valorTotal.replace(".",",");
-let valorTotalNumber = Number(valorTotalString);
-
-console.log(typeof valorTotalString);
-console.log(typeof valorTotal);
-console.log(typeof valorTotalNumber);
-console.log(valorTotalString);
-console.log(valorTotal);
-console.log(valorTotalNumber);
 
 function verificacao() {
 
@@ -89,7 +80,7 @@ function verificacao() {
 
 }
 
-function redirecionar(){
+function fazerPedido(){
 
     if (document.querySelector(".comida .escolhido") && document.querySelector(".bebida .escolhido") && document.querySelector(".sobremesa .escolhido")){
                 
@@ -105,37 +96,46 @@ function redirecionar(){
         document.querySelector(".sobremesaEscolhida div:nth-child(1)").innerHTML= nomeSobremesa;
         document.querySelector(".sobremesaEscolhida div:nth-child(2)").innerHTML=valorSobremesaString;
 
-        document.querySelector(".valorPedido div:nth-child(2)").innerHTML=`R$ ${valorTotalNumber}`;
+        let calculo = (valorComida+valorBebida+valorSobremesa);
+        let casasDecimais = calculo.toFixed(2);
+        let formato = casasDecimais.replace(".",",");
 
-        
-
+        document.querySelector(".valorPedido div:nth-child(2)").innerHTML=`R$ ${formato}`;
     }
 }
 
 
-// function verificacao(){    
-        
+function cancelarPedido(){
+        document.querySelector(".travado").classList.remove("travado");
+        document.querySelector(".segundaTela").classList.add("invisivel");
+
+}
+
+function mandarPedido(){
+
+    let calculo = (valorComida+valorBebida+valorSobremesa);
+    let casasDecimais = calculo.toFixed(2);
+    let formato = casasDecimais.replace(".",",");
+
+    let nomeCliente = prompt ("Qual o seu nome?");
+
+    while(isNaN(nomeCliente)==false) {
+
+        nomeCliente = prompt ("Por favor, digite um nome válido");
+
+    }
+
+    const enderecoCliente = prompt (`Olá, ${nomeCliente}, qual seu endereço?`);
+
+    let minhaString = `Olá, gostaria de fazer o pedido: \n- Prato: ${nomeComida}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${casasDecimais}\n \nNome: ${nomeCliente} \nEndereço: ${enderecoCliente}`;
+    const descricao = encodeURIComponent(minhaString);
+    console.log(descricao)
+
+    window.open(`https://wa.me/5524992588128?text=${descricao}`);
+}
 
 
-//     if(document.querySelector(".comida .escolhido") && document.querySelector(".bebida .escolhido") && document.querySelector(".sobremesa .escolhido")){
-        
-//         const adicionarClasse = document.querySelector(".rodape button");
-//         let conta= (valorComida+valorBebida+valorSobremesa);
-//         let valorTotal = conta.toFixed(2);       
-        
-//         let minhaString = `Olá, gostaria de fazer o pedido: \n- Prato: ${nomeComida}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${valorTotal}\n`;
-//         const links = encodeURIComponent(minhaString);
 
-//         adicionarClasse.innerHTML = `<a href='https://wa.me/5524992588128?text=${links}'><div>Fechar pedido</div></a>`;
-//         document.querySelector(".rodape > button a").classList.add("fazerPedido");
-//         adicionarClasse.classList.add("habilitado");
-//     }
-    
-//     else {
-//         document.querySelector(".rodape div").innerHTML = "Selecione os 3 itens para fechar o pedido";
-//     adicionarClasse.classList.remove("habilitado");
-//     }
-// }
 
 
 
