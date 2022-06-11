@@ -57,6 +57,18 @@ function selecionarSobremesa(x){
     verificacao();
 }
 
+let conta= (valorComida+valorBebida+valorSobremesa);
+let valorTotal = conta.toFixed(2);
+let valorTotalString = valorTotal.replace(".",",");
+let valorTotalNumber = Number(valorTotalString);
+
+console.log(typeof valorTotalString);
+console.log(typeof valorTotal);
+console.log(typeof valorTotalNumber);
+console.log(valorTotalString);
+console.log(valorTotal);
+console.log(valorTotalNumber);
+
 function verificacao() {
 
     const adicionarClasse = document.querySelector(".rodape button");
@@ -82,7 +94,20 @@ function redirecionar(){
     if (document.querySelector(".comida .escolhido") && document.querySelector(".bebida .escolhido") && document.querySelector(".sobremesa .escolhido")){
                 
         document.querySelector("body").classList.add("travado");
-        document.querySelector(".segundaTela").classList.remove("invisivel");        
+        document.querySelector(".segundaTela").classList.remove("invisivel");
+        
+        document.querySelector(".pratoEscolhido div:nth-child(1)").innerHTML= nomeComida;
+        document.querySelector(".pratoEscolhido div:nth-child(2)").innerHTML=valorComidaString;
+
+        document.querySelector(".bebidaEscolhida div:nth-child(1)").innerHTML= nomeBebida;
+        document.querySelector(".bebidaEscolhida div:nth-child(2)").innerHTML=valorBebidaString;
+
+        document.querySelector(".sobremesaEscolhida div:nth-child(1)").innerHTML= nomeSobremesa;
+        document.querySelector(".sobremesaEscolhida div:nth-child(2)").innerHTML=valorSobremesaString;
+
+        document.querySelector(".valorPedido div:nth-child(2)").innerHTML=`R$ ${valorTotalNumber}`;
+
+        
 
     }
 }
