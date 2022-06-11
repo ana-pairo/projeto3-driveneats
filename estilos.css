@@ -18,8 +18,102 @@ body {
     flex-direction: column;
     margin: 0 auto;
     background-color: #EEEEEE;
-    overflow-y: scroll;
+    position: relative;
+    /* overflow-y: hidden; */
+}
 
+.travado {
+    overflow-y: hidden;
+}
+
+.segundaTela{
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255, 0.9);
+    z-index: 4;
+    position: absolute;
+    top: 0px;
+}
+
+.invisivel {
+    display: none;
+}
+
+.confirmacao {
+    position: absolute;
+    width: 377px;
+    height: 353px;
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    position: fixed;
+    top: calc(50% - 353px/2 + 20px);
+    left: calc(50% - 377px/2);
+    padding: 0 25px;
+}
+
+.confirmacao > div:nth-child(1) {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 21px 0 25px 0;
+}
+
+.pratoEscolhido, .bebidaEscolhida, .sobremesaEscolhida {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+}
+
+.valorPedido {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+}
+
+.confirmacao > button {
+    background-color: #ffffff;
+    width: 333px;
+    height: 52px;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #50D074;
+    box-shadow: 0px 0px 10px 1px rgb(0,0,0, 0.25);
+    margin-top: 30px;
+}
+
+.cancelar {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
 }
 
 .topo {
@@ -243,7 +337,7 @@ a > div {
 @media(max-width:500px) {
     .opcoes::-webkit-scrollbar { 
         display: none;
-      }*/
+      }
 }
 
 

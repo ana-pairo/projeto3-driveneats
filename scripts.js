@@ -18,6 +18,7 @@ function selecionarComida(x){
     aparecer.classList.add("aparece");
     aparecer.classList.remove("check");
     nomeComida = x.querySelector(".nome").innerHTML;
+    valorComidaString = x.querySelector(".valor").innerHTML;
     valorComida = Number(x.querySelector(".valor").innerHTML.replace(",","."));
     verificacao();
 }
@@ -34,7 +35,8 @@ function selecionarBebida(x){
     aparecer.classList.add("aparece");
     aparecer.classList.remove("check");
     nomeBebida = x.querySelector(".nome").innerHTML;
-    valorBebida = Number(x.querySelector(".valor").innerHTML.replace(",","."));
+    valorBebidaString = x.querySelector(".valor").innerHTML
+    valorBebida = Number(x.querySelector(".valor").innerHTML.replace(",","."));    
     verificacao();
 }
 function selecionarSobremesa(x){
@@ -50,33 +52,65 @@ function selecionarSobremesa(x){
     aparecer.classList.add("aparece");
     aparecer.classList.remove("check");
     nomeSobremesa = x.querySelector(".nome").innerHTML;
+    valorSobremesaString = x.querySelector(".valor").innerHTML;
     valorSobremesa = Number(x.querySelector(".valor").innerHTML.replace(",","."));
     verificacao();
 }
 
-function verificacao(){    
-        
+function verificacao() {
 
+    const adicionarClasse = document.querySelector(".rodape button");
+    const mudarBotao = document.querySelector(".rodape div");
 
-    if(document.querySelector(".comida .escolhido") && document.querySelector(".bebida .escolhido") && document.querySelector(".sobremesa .escolhido")){
-        
-        const adicionarClasse = document.querySelector(".rodape button");
-        let conta= (valorComida+valorBebida+valorSobremesa);
-        let valorTotal = conta.toFixed(2);       
-        
-        let minhaString = `Olá, gostaria de fazer o pedido: \n- Prato: ${nomeComida}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${valorTotal}\n`;
-        const links = encodeURIComponent(minhaString);
+    if(document.querySelector(".comida .escolhido") && document.querySelector(".bebida .escolhido") && document.querySelector(".sobremesa .escolhido")) {
 
-        adicionarClasse.innerHTML = `<a href='https://wa.me/5524992588128?text=${links}'><div>Fechar pedido</div></a>`;
-        document.querySelector(".rodape > button a").classList.add("fazerPedido");
         adicionarClasse.classList.add("habilitado");
+        mudarBotao.classList.add("maior");
+        mudarBotao.innerHTML= "Fechar pedido";
+        return true;
     }
-    
     else {
-        document.querySelector(".rodape div").innerHTML = "Selecione os 3 itens para fechar o pedido";
-    adicionarClasse.classList.remove("habilitado");
+        mudarBotao.innerHTML = "Selecione os 3 itens para fechar o pedido";
+        adicionarClasse.classList.remove("habilitado");
+        return false;
+    }
+
+}
+
+function redirecionar(){
+
+    if (document.querySelector(".comida .escolhido") && document.querySelector(".bebida .escolhido") && document.querySelector(".sobremesa .escolhido")){
+                
+        document.querySelector("body").classList.add("travado");
+        document.querySelector(".segundaTela").classList.remove("invisivel");        
+
     }
 }
+
+
+// function verificacao(){    
+        
+
+
+//     if(document.querySelector(".comida .escolhido") && document.querySelector(".bebida .escolhido") && document.querySelector(".sobremesa .escolhido")){
+        
+//         const adicionarClasse = document.querySelector(".rodape button");
+//         let conta= (valorComida+valorBebida+valorSobremesa);
+//         let valorTotal = conta.toFixed(2);       
+        
+//         let minhaString = `Olá, gostaria de fazer o pedido: \n- Prato: ${nomeComida}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${valorTotal}\n`;
+//         const links = encodeURIComponent(minhaString);
+
+//         adicionarClasse.innerHTML = `<a href='https://wa.me/5524992588128?text=${links}'><div>Fechar pedido</div></a>`;
+//         document.querySelector(".rodape > button a").classList.add("fazerPedido");
+//         adicionarClasse.classList.add("habilitado");
+//     }
+    
+//     else {
+//         document.querySelector(".rodape div").innerHTML = "Selecione os 3 itens para fechar o pedido";
+//     adicionarClasse.classList.remove("habilitado");
+//     }
+// }
 
 
 
