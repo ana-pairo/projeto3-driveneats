@@ -1,121 +1,89 @@
-function verificacao(){
-
-    let x = 0;
-    const frase = document.querySelector(".rodape div");
-    const adicionarClasse = document.querySelector(".rodape button");
-
-    if(document.querySelector(".comida .escolhido")){
-        x=x+1;
-    }
-    
-    if(document.querySelector(".bebida .escolhido")){
-        x=x+1;
-    }
-    
-    if(document.querySelector(".sobremesa .escolhido")){
-        x=x+1;
-    }
-
-    if(x==3){
-        frase.innerHTML = "Fechar pedido";
-        adicionarClasse.classList.add("habilitado");
-    }
-
-    else {
-    frase.innerHTML = "Selecione os 3 itens para fechar o pedido";
-    adicionarClasse.classList.remove("habilitado");   
-    }
-
-
-}
-
+let nomeComida;
+let nomeBebida;
+let nomeSobremesa;
+let valorComida;
+let valorBebida;
+let valorSobremesa;
 
 function selecionarComida(x){
-
-    const selecionado = document.querySelector(".comida > .escolhido ");
-    const checked = document.querySelector("x > .aparece ");
-
-    if (selecionado !== null) {
+    const selecionado = document.querySelector(".comida > .escolhido");
+    const checked = document.querySelector(".comida > div > .aparece");
+    if (selecionado) {
         selecionado.classList.remove("escolhido");
         checked.classList.remove("aparece");
         checked.classList.add("check");
     }
-
-
     x.classList.add("escolhido");
-    const aparecer = document.querySelector("x > .aparece ");
+    const aparecer = x.querySelector(".check");
     aparecer.classList.add("aparece");
     aparecer.classList.remove("check");
-
+    nomeComida = x.querySelector(".nome").innerHTML;
+    valorComida = Number(x.querySelector(".valor").innerHTML.replace(",","."));
     verificacao();
 }
-
 function selecionarBebida(x){
-
-    const selecionado = document.querySelector(".bebida > .escolhido ");
-    
-
-    if (selecionado !== null) {
+    const selecionado = document.querySelector(".bebida > .escolhido");
+    const checked = document.querySelector(".bebida > div > .aparece");
+    if (selecionado) {
         selecionado.classList.remove("escolhido");
+        checked.classList.remove("aparece");
+        checked.classList.add("check");
     }
-
     x.classList.add("escolhido");
+    const aparecer = x.querySelector(".check");
+    aparecer.classList.add("aparece");
+    aparecer.classList.remove("check");
+    nomeBebida = x.querySelector(".nome").innerHTML;
+    valorBebida = Number(x.querySelector(".valor").innerHTML.replace(",","."));
     verificacao();
 }
-
 function selecionarSobremesa(x){
-
-    const selecionado = document.querySelector(".sobremesa > .escolhido ");
-    if (selecionado !== null) {
+    const selecionado = document.querySelector(".sobremesa > .escolhido");
+    const checked = document.querySelector(".sobremesa > div > .aparece");
+    if (selecionado) {
         selecionado.classList.remove("escolhido");
+        checked.classList.remove("aparece");
+        checked.classList.add("check");
+    }
+    x.classList.add("escolhido");
+    const aparecer = x.querySelector(".check");
+    aparecer.classList.add("aparece");
+    aparecer.classList.remove("check");
+    nomeSobremesa = x.querySelector(".nome").innerHTML;
+    valorSobremesa = Number(x.querySelector(".valor").innerHTML.replace(",","."));
+    verificacao();
+}
+
+function verificacao(){    
+        
+
+
+    if(document.querySelector(".comida .escolhido") && document.querySelector(".bebida .escolhido") && document.querySelector(".sobremesa .escolhido")){
+        
+        const adicionarClasse = document.querySelector(".rodape button");
+        let conta= (valorComida+valorBebida+valorSobremesa);
+        let valorTotal = conta.toFixed(2);       
+        
+        let minhaString = `Olá, gostaria de fazer o pedido: \n- Prato: ${nomeComida}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${valorTotal}\n`;
+        const links = encodeURIComponent(minhaString);
+
+        adicionarClasse.innerHTML = `<a href='https://wa.me/5524992588128?text=${links}'><div>Fechar pedido</div></a>`;
+        document.querySelector(".rodape > button a").classList.add("fazerPedido");
+        adicionarClasse.classList.add("habilitado");
     }
     
-
-    x.classList.add("escolhido");
-
-    verificacao();
+    else {
+        document.querySelector(".rodape div").innerHTML = "Selecione os 3 itens para fechar o pedido";
+    adicionarClasse.classList.remove("habilitado");
+    }
 }
 
 
 
 
-// function selecionarComida(x){
-//     const apagar = document.querySelector(".comida .escolhido");
-//     const esconder = document.querySelector("comida .escolhido > .check")
 
-//     if (apagar){
-//         apagar.classList.remove("escolhido");
-//         esconder.classList.add("escondido");
-//     }
 
-//     const selecionadoC = document.querySelector(".comida > div:nth-child("+x+")");
-//     const checked = document.querySelector(".comida > div:nth-child("+x+") > .escondido"); 
-//     selecionadoC.classList.add("escolhido");
-//     checked.classList.remove("escondido");
-//     verificacao();
-// }
 
-// function selecionarBebida(x){
-//     const apagar = document.querySelector(".bebida .escolhido");
-//     if (apagar){
-//         apagar.classList.remove("escolhido");
-//     }
-
-//     const selecionadoB = document.querySelector(".bebida > div:nth-child("+x+")");
-//     selecionadoB.classList.add("escolhido");
-//     verificacao();
-// }
-
-// function selecionarSobremesa(x){
-//     const apagar = document.querySelector(".sobremesa .escolhido");
-//     if (apagar){
-//         apagar.classList.remove("escolhido");
-//     }
-
-//     const selecionadoS = document.querySelector(".sobremesa > div:nth-child("+x+")");
-//     selecionadoS.classList.add("escolhido");
-//     verificacao();
-// }
 
 
 

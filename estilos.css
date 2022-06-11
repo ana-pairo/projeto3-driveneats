@@ -7,6 +7,10 @@
 	box-sizing: border-box;
 }
 
+.fazerPedido {
+    text-decoration: none;
+  }
+
 body {
     width: 414px;
     height: 1026px;
@@ -49,11 +53,14 @@ body {
 }
 
 .container {
+    width: 100%;
     overflow-y: scroll;
+    margin: 0 auto;
 
 }
 
 .container::-webkit-scrollbar { 
+    width: 100%;
     display: none;
   }
 
@@ -77,16 +84,9 @@ body {
     display: flex;
     overflow-x: scroll; 
 }
-
-/* VER SE PODE...SE VÃO USAR MOBILE PARA VER 
-
-.opcoes::-webkit-scrollbar { 
-    display: none;
-  }*/
-
+ 
 .opcoes > div {
     height: 225px;
-    background-color: #ffffff;
     margin: 19px 19px 19px 0;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
@@ -95,7 +95,7 @@ body {
 }
 
 .escolhido {
-    border: 5px solid rgb(50, 183, 47);
+    border: 5px solid #32B72F;
 }
 
 .check {
@@ -107,7 +107,7 @@ body {
     height: 19px;
     position: absolute;
     right: 10px;
-    bottom: 2px;
+    bottom: 9px;
     border-radius: 100%;
     color: #32B72F;
 }
@@ -134,7 +134,7 @@ img {
     width: 144px;
     height: 87px;
     object-fit:cover;
-    margin: 18px 0 8px 0;
+    margin: 18px 0 5px 0;
     border-radius: 4px;
 }
 
@@ -151,7 +151,7 @@ img {
 
 .descricao {
     height: 39px;
-    margin: 5px 0;
+    margin: 2px 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 15px;
@@ -161,7 +161,6 @@ img {
 }
 
 .preco {
-    background-color: #CF2B2B;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -172,7 +171,6 @@ img {
 
 .valor {
     margin-left: 5px;
-    background-color: #333333;
 }
 
 .rodape {
@@ -185,13 +183,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* width: 414px;
-    height: 95px;
-    background-color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;*/
 }
 
 button {
@@ -210,7 +201,7 @@ button {
     background-color: #32B72F;
 }
 
-button > div {
+button div {
     width: 200px; 
     text-align: center;
     font-size: 20px;
@@ -220,6 +211,41 @@ button > div {
     font-weight: 400;
 
 }
+
+button > .maior {
+    width: 364px;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 23px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+a > div {
+    width: 364px;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 23px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+}
+
+
+@media(max-width:500px) {
+    .opcoes::-webkit-scrollbar { 
+        display: none;
+      }*/
+}
+
 
 
 
